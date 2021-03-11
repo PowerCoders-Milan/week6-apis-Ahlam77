@@ -5,11 +5,12 @@
 }
 
 body {
+
     background-color: darkred;
 }
 
 .div {
-    flex: 1;
+    flex: 2;
     display: inline-block;
     background-color: darksalmon;
     margin: 10vh;
@@ -40,8 +41,21 @@ body {
     display: inline-block;
     margin: 10vh;
     padding: 10vh;
-    border-radius: 30px;
+    border-radius: 20px;
     direction: ltr;
     height: 60px;
     box-shadow: 5px 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 50vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding: 10vh;
+    box-shadow: 5px 5px 5px 5px sienna;
+    border-radius: 20px;
+    width: 90vh;
+    font-family: cursive;
+
 }

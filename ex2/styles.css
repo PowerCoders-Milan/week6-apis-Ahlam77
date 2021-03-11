@@ -1,12 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+
+}
+
+body {
+    background-color: darkred;
 }
 
 .div {
     flex: 1;
     display: inline-block;
-    background-color: darkcyan;
+    background-color: darksalmon;
     margin: 10vh;
     padding: 10vh;
     border-radius: 30px;
@@ -18,7 +23,7 @@
 .div2 {
     display: inline-block;
     flex: 1;
-    background-color: darkcyan;
+    background-color: darksalmon;
     margin: 10vh;
     padding: 10vh;
     border-radius: 30px;
@@ -31,8 +36,8 @@
 
 .div3 {
     flex: 1;
+    background-color: darksalmon;
     display: inline-block;
-    background-color: darkcyan;
     margin: 10vh;
     padding: 10vh;
     border-radius: 30px;

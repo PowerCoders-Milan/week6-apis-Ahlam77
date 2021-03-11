@@ -32,7 +32,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Barlin&units=metric&app
         p3.innerHTML = data.weather[0].description
         });
         
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Libya&units=metric&appid=65daeff6b19a4d6bb23b5f9ead176075')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Tripoli&units=metric&appid=65daeff6b19a4d6bb23b5f9ead176075')
     .then(response => response.json())
     .then( data => {
         var body = document.querySelector("body")

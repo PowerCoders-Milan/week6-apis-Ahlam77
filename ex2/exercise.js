@@ -1,4 +1,4 @@
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Barlin&appid=65daeff6b19a4d6bb23b5f9ead176075')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Barlin&units=metric&appid=65daeff6b19a4d6bb23b5f9ead176075')
     .then(response => response.json())
     .then( data => {
         var body = document.querySelector("body")
@@ -15,7 +15,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Barlin&appid=65daeff6b1
         p3.innerHTML = data.weather[0].description
     });
 
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=65daeff6b19a4d6bb23b5f9ead176075')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=65daeff6b19a4d6bb23b5f9ead176075')
     .then(response => response.json())
     .then( data => {
         var body = document.querySelector("body")
@@ -32,8 +32,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Barlin&appid=65daeff6b1
         p3.innerHTML = data.weather[0].description
         });
         
-
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Libya&appid=65daeff6b19a4d6bb23b5f9ead176075')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Libya&units=metric&appid=65daeff6b19a4d6bb23b5f9ead176075')
     .then(response => response.json())
     .then( data => {
         var body = document.querySelector("body")
@@ -48,4 +47,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Barlin&appid=65daeff6b1
         p1.innerHTML = data.name
         p2.innerHTML = data.main.temp
         p3.innerHTML = data.weather[0].description
+        console.log(data)
+        console.log(data.main)
         });

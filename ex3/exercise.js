@@ -19,7 +19,6 @@ fetch('https://www.omdbapi.com/?s=harry potter&apikey=5a217d93')
     
     })
 
-    
  var searchBox = document.querySelector("#t") 
 
 function change() {

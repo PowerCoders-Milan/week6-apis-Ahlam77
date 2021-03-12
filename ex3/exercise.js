@@ -19,39 +19,38 @@ fetch('https://www.omdbapi.com/?s=harry potter&apikey=5a217d93')
     
     })
 
- var searchBox = document.querySelector("#t") 
+ function searchMovie(){
+    var NewTitle = document.querySelector("input").value;
+    console.log(NewTitle);
 
-function change() {
-    
-    var inputText = document.querySelector("#t").value
-    console.log(inputText)
-    fetch("https://www.omdbapi.com/?s="+ inputText +"&apikey=5a217d93")
-    .then(response => response.json())
-    .then( data => {
-        console.log(data)
-        if (data.Search) {
-            var div = document.querySelectorAll("div")
-            div.forEach( function (item){
-                item.remove();
-                console.log("text")
-            })
-            data.Search.forEach(function(item) {   
-            var body = document.querySelector("body")
-            var p = document.createElement("div")
-            var p1 = document.createElement("p")
-            var p2 = document.createElement("p")
-            var image = document.createElement("img")
-            p1.innerHTML = item.Title
-            p2.innerHTML = item.Year
-            image.setAttribute("src", item.Poster)
-            body.appendChild(p)
-            p.appendChild(p1)
-            p.appendChild(p2)
-            p.appendChild(image)
-            console.log(item.Title)
-        })} 
-    
-    })
-} 
+    document.querySelectorAll("div").forEach(element =>{
+        element.remove();
+    }
+        )
+
+
+    fetch(`http://www.omdbapi.com/?s=${NewTitle}&apikey=5a217d93`)
+        .then(response => response.json())
+        .then(data=>{
+            console.log(data);
+            data.Search.forEach(element=> {
+            var main = document.createElement("div");
+            var Title = document.createElement("p");
+            Title.innerHTML = element.Title;
+            var year =document.createElement("p");
+            year.innerHTML = element.Year;
+            var poster =document.createElement("img");
+            poster.setAttribute("src", element.Poster);
+            console.log(Title);
+            console.log(year);
+            main.appendChild(Title);
+            main.appendChild(year);
+            main.appendChild(poster);
+            document.getElementsByTagName("body")[0].appendChild(main);
+        
+    }) 
+})
+
+}
   
-searchBox.addEventListener("keyup",change)
+document.querySelector("input").addEventListener("keyup", searchMovie)

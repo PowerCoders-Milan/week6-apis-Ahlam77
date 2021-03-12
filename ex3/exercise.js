@@ -26,7 +26,7 @@ function change() {
     
     var inputText = document.querySelector("#t").value
     console.log(inputText)
-    fetch("https://www.omdbapi.com/?s="+ inputText +"&apikey=b2d979a1")
+    fetch("https://www.omdbapi.com/?s="+ inputText +"&apikey=5a217d93")
     .then(response => response.json())
     .then( data => {
         console.log(data)
